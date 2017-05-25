@@ -1,27 +1,27 @@
 package com.registration.action;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import javax.annotation.Resource;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 import com.registration.model.User;
 import com.registration.service.UserManager;
+import com.registration.vo.UserRegistorInfo;
 
-public class UserAction extends ActionSupport{
+@Component("user")
+@Scope("prototype")
+public class UserAction extends ActionSupport implements ModelDriven{
 	private UserManager um;
-	private String username;
-	private String password;
-	private String password2;
-	
-	public UserAction() {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
-		um = (UserManager)ctx.getBean("userManager");
-	}
+	private UserRegistorInfo info = new UserRegistorInfo();
 	
 	public UserManager getUm() {
 		return um;
 	}
-
+	
+	@Resource(name="userManager")
 	public void setUm(UserManager um) {
 		this.um = um;
 	}
@@ -29,35 +29,23 @@ public class UserAction extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		User u = new User();
-		u.setUsername(username);
-		u.setPassword(password);
+		u.setUsername(info.getUsername());
+		u.setPassword(info.getPassword());
 		if(um.existUser(u)) return "fail";
 		um.add(u);
 		return "success";
 	}
 
-	public String getUsername() {
-		return username;
+	public UserRegistorInfo getInfo() {
+		return info;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setInfo(UserRegistorInfo info) {
+		this.info = info;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getPassword2() {
-		return password2;
-	}
-
-	public void setPassword2(String password2) {
-		this.password2 = password2;
+	public Object getModel() {
+		return info;
 	}
 
 }

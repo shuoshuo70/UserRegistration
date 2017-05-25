@@ -26,7 +26,7 @@ public class UserManagerImpl implements UserManager {
 	 * @see com.registration.service.impl.UserManager#existUser(com.registration.model.User)
 	 */
 	public boolean existUser(User u) throws Exception{
-		return userDao.loadByName(u.getUsername()) != null;
+		return userDao.loadByName(u.getUsername()) !=  null;
 	}
 	
 	/* (non-Javadoc)

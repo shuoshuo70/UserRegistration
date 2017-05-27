@@ -4,6 +4,10 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="java-output-path" value="/SSH_2300_Registration/WebRoot/WEB-INF/classes"/>
+<<<<<<< HEAD
         <property name="context-root" value="/SSH_3100_Registration"/>
+=======
+        <property name="context-root" value="/SSH_3000_Registration"/>
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
     </wb-module>
 </project-modules>

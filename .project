@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>SSH_3100_Registration</name>
+=======
+	<name>SSH_3000_Registration</name>
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
 	<comment></comment>
 	<projects>
 	</projects>

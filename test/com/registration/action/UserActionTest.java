@@ -9,6 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.registration.vo.UserRegistorInfo;
 
+import com.registration.vo.UserRegistorInfo;
+
 public class UserActionTest {
 
 	@Test

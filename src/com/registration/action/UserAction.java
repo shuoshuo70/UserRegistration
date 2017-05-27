@@ -1,7 +1,10 @@
 package com.registration.action;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
@@ -18,7 +21,10 @@ import com.registration.vo.UserRegistorInfo;
 public class UserAction extends ActionSupport implements ModelDriven{
 	private UserManager um;
 	private UserRegistorInfo info = new UserRegistorInfo();
+<<<<<<< HEAD
 	private List<User> users;
+=======
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
 	
 	public UserManager getUm() {
 		return um;
@@ -38,6 +44,7 @@ public class UserAction extends ActionSupport implements ModelDriven{
 		um.add(u);
 		return "success";
 	}
+<<<<<<< HEAD
 	
 	public String list() {
 		users = um.getUsers();
@@ -62,6 +69,19 @@ public class UserAction extends ActionSupport implements ModelDriven{
 
 	public void setList(List<User> users) {
 		this.users = users;
+=======
+
+	public UserRegistorInfo getInfo() {
+		return info;
+	}
+
+	public void setInfo(UserRegistorInfo info) {
+		this.info = info;
+	}
+
+	public Object getModel() {
+		return info;
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.registration.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
@@ -26,7 +28,7 @@ public class UserManagerImpl implements UserManager {
 	 * @see com.registration.service.impl.UserManager#existUser(com.registration.model.User)
 	 */
 	public boolean existUser(User u) throws Exception{
-		return userDao.loadByName(u.getUsername()) != null;
+		return userDao.loadByName(u.getUsername()) !=  null;
 	}
 	
 	/* (non-Javadoc)
@@ -34,5 +36,9 @@ public class UserManagerImpl implements UserManager {
 	 */
 	public void add(User u) throws Exception{
 		userDao.save(u);
+	}
+
+	public List<User> getUsers() {
+		return userDao.getUsers();
 	}
 }

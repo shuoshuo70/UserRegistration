@@ -41,8 +41,11 @@ public class UserManagerImpl implements UserManager {
 	public List<User> getUsers() {
 		return userDao.getUsers();
 	}
+<<<<<<< HEAD
 
 	public User loadById(int id) {
 		return userDao.loadById(id);
 	}
+=======
+>>>>>>> 601f57bcf35fc05414395f44ff2da8f66d0f2e47
 }

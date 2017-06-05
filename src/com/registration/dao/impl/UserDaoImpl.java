@@ -16,6 +16,13 @@ import com.registration.model.User;
 @Component("userDao")
 public class UserDaoImpl implements UserDao {
 	private HibernateTemplate hibernateTemplate;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	private SessionFactory sessionFactory;
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
+>>>>>>> 601f57bcf35fc05414395f44ff2da8f66d0f2e47
 
 	public void save(User u) {
 		hibernateTemplate.save(u);
@@ -36,6 +43,7 @@ public class UserDaoImpl implements UserDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
+<<<<<<< HEAD
 
 	public List<User> getUsers() {
 		return (List<User>)hibernateTemplate.find("from User");
@@ -43,6 +51,21 @@ public class UserDaoImpl implements UserDao {
 
 	public User loadById(int id) {
 		return (User)this.hibernateTemplate.load(User.class, id);
+=======
+<<<<<<< HEAD
+
+	public List<User> getUsers() {
+		return (List<User>)hibernateTemplate.find("from User");
+=======
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+	
+	@Resource
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+>>>>>>> 49edd69c02a89d8dd0528c0558a2674f4ac0d978
+>>>>>>> 601f57bcf35fc05414395f44ff2da8f66d0f2e47
 	}
 
 }

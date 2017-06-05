@@ -11,7 +11,10 @@
 			<result name="success">/registrater_success.jsp</result>
 			<result name="fail">/registrater_fail.jsp</result>
 			<result name="list">/userList.jsp</result>
+<<<<<<< HEAD
 			<result name="load">/user.jsp</result>
+=======
+>>>>>>> 601f57bcf35fc05414395f44ff2da8f66d0f2e47
 
 		</action>
 	</package>

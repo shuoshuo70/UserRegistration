@@ -6,10 +6,12 @@
 <struts>
 	<package name="registration" extends="struts-default">
 
-		<action name="user" class="com.registration.action.UserAction">
+		<action name="userAction" class="com.registration.action.UserAction">
 
 			<result name="success">/registrater_success.jsp</result>
 			<result name="fail">/registrater_fail.jsp</result>
+			<result name="list">/userList.jsp</result>
+			<result name="load">/user.jsp</result>
 
 		</action>
 	</package>

@@ -8,6 +8,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.registration.vo.UserRegistorInfo;
+<<<<<<< HEAD
+=======
+
+
+import com.registration.vo.UserRegistorInfo;
+
+>>>>>>> a0196abeb35b3d9c3455d55c110c945669150e65
 
 public class UserActionTest {
 

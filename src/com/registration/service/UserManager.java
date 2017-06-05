@@ -15,4 +15,8 @@ public interface UserManager {
 
 	public abstract User loadById(int id);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0196abeb35b3d9c3455d55c110c945669150e65
 }
